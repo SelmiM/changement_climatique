@@ -39,26 +39,8 @@ Le site permet notamment de :
 * utiliser des données provenant d'un fichier XML ;
 * interagir avec les éléments de la page grâce à JavaScript.
 
----
-
-##  Structure du projet
 
 
-changement-climatique/
-│
-├── index.html
-├── css/
-│   └── style.css
-│
-├── js/
-│   └── script.js
-│
-├── xml/
-│   └── donnees.xml
-│
-├── images/
-│   └── ..
-```
 
 
 ##  Contexte
