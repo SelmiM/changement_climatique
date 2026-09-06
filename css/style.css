@@ -1,0 +1,387 @@
+@font-face {
+    font-family: 'permanent_markerregular';
+    src: url('PermanentMarker-webfont.eot');
+    src: url('PermanentMarker-webfont.eot?#iefix') format('embedded-opentype'),
+            url('PermanentMarker-webfont.woff2') format('woff2'),
+            url('PermanentMarker-webfont.woff') format('woff'),
+            url('PermanentMarker-webfont.ttf') format('truetype'),
+            url('PermanentMarker-webfont.svg#permanent_markerregular') format('svg');
+            
+    font-weight: normal;
+    font-style: normal;
+    
+}
+.fontdiner-swanky-regular {
+    font-family: "Fontdiner Swanky", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+  
+body {
+    width: 100%;
+    height: 100%;
+    background: url("../img/nature.png") fixed repeat top left
+    
+    
+}
+body{
+    
+    background-size:100%;
+    background-image : url("../img/nature.png") fixed repeat top left;
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+    overflow-x: hidden; /* Désactive uniquement le scroll horizontal */
+    
+}
+
+#entete{
+    width: 100%;
+    height: 30%;
+}
+
+#entete1{
+    width: 100%;
+    height:10% ;
+    display: flex;
+    justify-content:row;
+    
+    
+    
+}
+#entete1a{
+    width: 45%;
+    justify-content:center;
+}
+#entete1b{
+    width: 55%;
+    
+    align-items: center;
+}
+ul {
+   justify-content:flex-start;
+   align-items:baseline;
+   text-decoration: underline;
+   text-decoration: overline;
+   
+}
+ul a {
+    color: black;
+    font-size:20px;
+
+}
+ul a:hover{
+    
+    color:brown; 
+    font-size: 80%; 
+    font-weight: bold; 
+
+}
+
+#entete2{
+    
+    width: 100%;
+    height: 20%;
+    
+}
+#navigation2 {
+    width: 70%;
+    height:40%;
+    margin: auto;
+    text-align: center;
+    position: relative;
+}
+
+.slides {
+    display: none; /* Cache toutes les images par défaut */
+    width: 100%;
+}
+
+.slides img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Boutons de navigation */
+.controls {
+    margin-top: 10px;
+}
+
+.controls button {
+    padding: 10px 20px;
+    font-size: 16px;
+    margin: 5px;
+    cursor: pointer;
+    border: none;
+    background-color: brown;
+    color: white;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.controls button:hover {
+    background-color:burlywood;
+}
+
+/* Miniatures */
+.thumbnails {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+.thumbnail {
+    width: 80px;
+    height: 60px;
+    margin: 5px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.thumbnail:hover {
+    transform: scale(1.1);
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Afficher le premier slide au chargement */
+.slides:first-child {
+    display: block;
+}
+
+
+
+h1{
+    
+    font-size:300%;
+    color:brown;
+    font-family: "Fontdiner Swanky", serif;
+    text-align: center;
+}
+
+
+#navigation {
+    width: 100%;
+    height:70%;
+    display: flex;
+    flex-direction:column;
+    text-align: center;
+    
+    
+   
+    
+   
+}
+    
+#navigation1 {
+    width: 100%;
+    height: 20%;
+    background-color:burlywood;
+    
+    
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+    font-size: 150%;
+      
+}
+
+
+
+#navigation1 table{
+    width: 100%;
+   
+    
+    border-style: hidden;
+    border-collapse: collapse;   /* Pour éviter les espaces entre les bordures */
+    overflow: hidden;
+    /*font-family: 'permanent_markerregular';*/
+    margin-left:auto;
+    margin-right: auto;
+    
+}    
+    
+    
+td, th {
+    text-align: center; /* Centrage du texte dans les cellules */
+        padding: 10px; /* Ajoute un peu d'espace autour du texte */
+        
+}
+    
+
+#navigation1 a {
+    
+    text-decoration: underline;
+    color:black;
+    font-size:60%;
+}
+
+#navigation a:hover{
+    
+    color:brown; 
+    font-size: 80%; 
+    font-weight: bold; 
+
+}
+
+
+
+
+
+
+
+
+    
+.prev{
+    cursor: pointer;
+    color: white;
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    padding: 16px;
+    border-radius: 0 3px 3px 0;
+    background: rgba(0, 0, 0, 1);
+}
+
+
+.next{ 
+    cursor: pointer;
+    color: white;
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    padding: 16px;
+    border-radius: 0 3px 3px 0;
+    background: rgba(0, 0, 0, 1);
+}
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}*/
+
+
+
+/*Styles de base(pour les grands écrans)*/
+body{
+    font-size: 100%;
+    padding: 0;
+    margin: 0 auto;
+}
+#corps{
+    width: 80%;/*la largeur est relative à la taille de l'écran*/
+    margin: 0% auto;/*centrer l'élément*/
+    display: flex;
+    flex-direction:row;
+}
+/*Pour les petits écrans(max-width:600px)*/
+@media screen and (max-width:600px){
+    body{
+        font-size: 50%;
+        padding: 10%;
+        display: flex;
+        flex-direction: column;
+    }
+    #navigation{
+        width: 90%;
+        display: flex;
+        flex-direction:column;
+    
+    }
+    
+    
+   
+  
+   
+   
+}
+/*Pour les écrans moyens*/
+@media screen and (min-widh:601px) and (max-with:1024px){
+    body{
+        font-size:  size 70%;;
+        padding: 5%;
+    }
+    #navigation{
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+    }
+    #corps{
+        width: 90%;
+        display: flex;
+        flex-direction:column;
+    
+    }
+  
+    
+}
+
+
+h1 {
+    margin-left: 70px;
+}
+
+table td label {
+    float: left;
+    width: 100px;
+    text-align: right;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 14px;
+}
+
+table td input,
+select,
+span {
+    float: left;
+    margin-bottom: 5px;
+}
+
+table td textarea {
+    float: left;
+    width: 350px;
+    height: 150px;
+}
+
+.formButton {
+    margin: 20px 0 0 20px;
+    color: black;
+    background-color: brown;
+    cursor: pointer;
+}
+.formButton:hoover{
+    background-color: burlywood;
+    font-size: 80%; 
+    font-weight: bold; 
+}
+button{ margin: 20px 0 0 20px;
+    color: black;
+    background-color: brown;
+    cursor: pointer;}
+.butoon:hoover{
+    background-color: burlywood;
+    font-size: 80%; 
+    font-weight: bold;
+}    
+p {
+    margin-left: 70px;
+    font-weight: bold;
+    
+}
+
+#livres {
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+}
+
+
+
+
+
+ 
+
+
+
+

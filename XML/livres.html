@@ -1,0 +1,69 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css" type="text/css">
+    
+    <title>Livres de Bibliographie</title>
+</head>
+<body>
+
+    <h2>Livres de Bibliographie</h2>
+    <button onclick="chargerLivres()">Afficher les livres</button>
+    <div id="livres"></div>
+
+
+    <script>
+        function chargerLivres() {
+            let xhr = new XMLHttpRequest(); // Crée une nouvelle requête
+            xhr.open("GET", "livres.xml", true); // Ouvre le fichier XML (livres.xml)
+
+            // Fonction qui se déclenche quand la réponse est prête
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState == 4) {
+                    if (xhr.status == 200) { // Quand la requête est terminée avec succès
+                        afficherLivres(xhr.responseXML); // Afficher les livres en passant le contenu XML
+                    } else {
+                        document.getElementById("livres").innerHTML = "<p>Erreur lors du chargement des livres.</p>";
+                    }
+                }
+            };
+
+            xhr.send(); // Envoie la requête pour charger le fichier XML
+        }
+
+        function afficherLivres(xml) {
+            let livresDiv = document.getElementById("livres"); // La division où on affiche les livres
+            let livres = xml.getElementsByTagName("livre"); // Récupère tous les éléments <livre> du fichier XML
+            let contenu = "<h3>Liste des livres :</h3>";
+
+            for (let i = 0; i < livres.length; i++) {
+                // Récupère les données de chaque livre
+                let titre = livres[i].getElementsByTagName("titre")[0].textContent;
+                let auteur = livres[i].getElementsByTagName("auteur")[0].textContent;
+                let annee = livres[i].getElementsByTagName("annee")[0].textContent;
+                let genre = livres[i].getElementsByTagName("genre")[0].textContent;
+
+                // Ajoute les données dans le contenu HTML
+                contenu += `<p><strong>${titre}</strong> - ${auteur} (${annee})<br><em>${genre}</em></p>`;
+            }
+
+            livresDiv.innerHTML = contenu; // Affiche le contenu dans la division
+        }
+
+        function GoHome() {
+            window.location.href = "../index.html"; 
+     }
+    </script>
+    
+
+    <input type="button" id="btnSubmit" value="Home" onclick="GoHome()" class="formButton" />
+
+</body>
+</html>
+
+
+
+

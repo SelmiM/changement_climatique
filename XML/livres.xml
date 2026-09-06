@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<livres>
+    <livre>
+        <titre>Catastrophe: Risk and Response</titre>
+        <auteur>Richard Posner</auteur>
+        <annee>2004</annee>
+        <genre>Bibliographie</genre>
+    </livre>
+    <livre>
+        <titre>Le Grand Livre du climat</titre>
+        <auteur>Greta Thunberg</auteur>
+        <annee>2022</annee>
+        <genre>Bibliographie</genre>
+    </livre>
+    <livre>
+        <titre>La Terre inhabitable</titre>
+        <auteur> David Wallace-Wells</auteur>
+        <annee>2019</annee>
+        <genre>Bibliographie</genre>
+    </livre>
+</livres>
+
